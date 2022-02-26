@@ -3,7 +3,6 @@ export class Conta{
         this._saldo = saldoInicial;
         this._cliente = cliente;
         this.agencia = agencia;
-        this._tipo = tipo;
     }
 
     set cliente(novoValor){
@@ -22,15 +21,6 @@ export class Conta{
 
     sacar(valor){
         let taxa = 1;
-        if(this._tipo == "corrrente"){
-            taxa = 1.1;
-        }
-        if(this._tipo == "salario"){
-            taxa = 1;
-        }
-        if(this._tipo == "empresarial"){
-            taxa = 1.15;
-        }
         if(this._saldo >= valor){
             this._saldo -= valor;
             return valor;
