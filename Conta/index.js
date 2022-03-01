@@ -12,4 +12,5 @@ const contaSalario = new ContaSalario(cliente1);
 contaSalario.depositar(100);
 contaSalario.sacar(10);
 
+
 console.log(contaSalario);
